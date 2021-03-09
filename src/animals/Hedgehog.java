@@ -30,8 +30,23 @@ public class Hedgehog extends Carnivorous implements Run, Voice {
     }
 
     @Override
+    public void runningFast() {
+        System.out.println("Hedgehog is running very fast.");
+    }
+
+    @Override
+    public void runningSlow() {
+        System.out.println("Hedgehog is running very slow.");
+    }
+
+    @Override
     public String voice() {
-        return "Hssssssss!";
+        return "hssssssss!";
+    }
+
+    @Override
+    public String voiceLoud() {
+        return voice().toUpperCase();
     }
 
 

@@ -1,6 +1,7 @@
 package animals;
 
 import food.Food;
+import food.WrongFoodException;
 import zooService.AviarySize;
 
 public abstract class Animal {
@@ -22,10 +23,6 @@ public abstract class Animal {
 
     public AviarySize getSize() {
         return size;
-    }
-
-    public static int getCount() {
-        return count;
     }
 
     public int getUniqID() {
@@ -67,5 +64,5 @@ public abstract class Animal {
         return uniqID == animal.uniqID;
     }
 
-    public abstract boolean eat(Food food);
+    public abstract void eat(Food food) throws WrongFoodException;
 }
