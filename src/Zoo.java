@@ -53,6 +53,7 @@ public class Zoo {
 
         herbivoreAviary.removeAnimalFormAviaryById(alpaca3.getUniqID());
         herbivoreAviary.putAnimalToAviary(alpaca3);
+        herbivoreAviary.putAnimalToAviary(alpaca3);
         carnivorousAviary.removeAnimalFormAviaryById(fish.getUniqID());
 
         System.out.println();
