@@ -29,7 +29,7 @@ public class Aviary<Type> {
         }
     }
 
-    public void removeAnimalFormAviary(int uniqID) {
+    public void removeAnimalFormAviaryById(int uniqID) {
         if (aviary.get(uniqID) != null) {
             System.out.println(aviary.get(uniqID).getAnimalName() + " war removed from aviary.");
             aviary.remove(uniqID);

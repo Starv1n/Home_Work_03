@@ -29,6 +29,7 @@ public class Zoo {
         Carnivorous[] carnivorous = new Carnivorous[]{fish, platypus, hedgehog};
         Herbivore[] herbivores = new Herbivore[]{alpaca, alpaca1, alpaca2, alpaca3, duck, capybara};
         Food[] foods = new Food[]{apples, insects, mediumRareSteak, mushrooms, seaweed, smallFish};
+        Animal[] animals = new Animal[]{alpaca, alpaca1, alpaca2, alpaca3, duck, capybara, fish, platypus, hedgehog};
 
         Aviary<Herbivore> herbivoreAviary = new Aviary<>(AviarySize.Huge);
         Aviary<Carnivorous> carnivorousAviary = new Aviary<>(AviarySize.Big);
@@ -50,9 +51,9 @@ public class Zoo {
         herbivoreAviary.getAllAnimalsInAviary();
         carnivorousAviary.getAllAnimalsInAviary();
 
-        herbivoreAviary.removeAnimalFormAviary(alpaca3.getUniqID());
+        herbivoreAviary.removeAnimalFormAviaryById(alpaca3.getUniqID());
         herbivoreAviary.putAnimalToAviary(alpaca3);
-        carnivorousAviary.removeAnimalFormAviary(fish.getUniqID());
+        carnivorousAviary.removeAnimalFormAviaryById(fish.getUniqID());
 
         System.out.println();
 
@@ -67,6 +68,11 @@ public class Zoo {
                 worker.feed(value, food);
             }
             System.out.println();
+        }
+
+        System.out.printf("%-15s %-10s\n", "Animal name", "UniqID");
+        for (Animal animal : animals) {
+            System.out.printf("%-18s %-2s\n", animal.getAnimalName(), animal.getUniqID());
         }
     }
 }

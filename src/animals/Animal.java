@@ -6,6 +6,10 @@ import zooService.AviarySize;
 
 public abstract class Animal {
 
+    public static int getCount() {
+        return count;
+    }
+
     private static int count;
 
     private final String animalType;
